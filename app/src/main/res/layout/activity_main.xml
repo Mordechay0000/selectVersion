@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_vertical"
+    android:foregroundGravity="center_vertical|center"
+    android:layoutDirection="rtl"
+    app:layout_anchorGravity="center|center_vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_vertical|center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:background="#FCFCFC"
+            android:foregroundGravity="center_vertical|center"
+            android:gravity="center|center_vertical"
+            android:orientation="vertical"
+            android:scrollbarSize="5dp"
+            android:scrollbars="horizontal|vertical"
+            android:textAlignment="center"
+            android:verticalScrollbarPosition="right">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ברוך הבא \n \n\ בחר את הגרסה שמתאימה לך, בחר בזהירות,  \n לאחר סיום התהליך לא תוכל לשנות את הבחירה"
+                android:textAlignment="center" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_b4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="23dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   מותאם אישית."
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   גרסה בהתאמה אישית." />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical"
+                android:text="גרסאות ללא איטנרט!"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_b1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:nextFocusDown="@id/cardView_b2"
+                app:cardCornerRadius="23dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:nextFocusDown="@id/cardView_b2"
+                    android:orientation="vertical"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   כשר, נגן."
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   נגן בלבד." />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_duoqin_music" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_b2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="23dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  כשר נגן קבצים."
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  נגן, מצלמה, גלריה, קבצים." />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_launcher_duoqin_music" />
+
+                        <Space
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_camera" />
+
+                        <Space
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_gallery3d" />
+
+                        <Space
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_documentsui" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_b3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="23dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  כשר נגן קבצים sms."
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  נגן, מצלמה, גלריה, קבצים, הודעות." />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="9dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_launcher_duoqin_music" />
+
+                        <Space
+                            android:layout_width="9dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_camera" />
+
+                        <Space
+                            android:layout_width="9dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_gallery3d" />
+
+                        <Space
+                            android:layout_width="9dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            app:srcCompat="@drawable/ic_launcher_documentsui" />
+
+                        <Space
+                            android:layout_width="9dp"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_launcher_messaging" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
