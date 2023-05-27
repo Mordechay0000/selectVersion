@@ -8,7 +8,7 @@
     android:foregroundGravity="center_vertical|center"
     android:layoutDirection="rtl"
     app:layout_anchorGravity="center|center_vertical"
-    tools:context=".MainActivity">
+    tools:context=".DetailedActivity">
 
     <ScrollView
         android:layout_width="fill_parent"

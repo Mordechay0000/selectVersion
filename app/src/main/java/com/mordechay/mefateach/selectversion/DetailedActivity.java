@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class DetailedActivity extends AppCompatActivity implements View.OnClickListener {
 
     Intent i;
 
@@ -85,14 +85,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     public void intent(int[] value, boolean[] isBlocked,boolean skipScreen){
         if(!skipScreen){
-            i = new Intent(MainActivity.this, is_app_or_fuction.class); //set intent to open another activity is_app_or_function
+            i = new Intent(DetailedActivity.this, is_app_or_fuction.class); //set intent to open another activity is_app_or_function
         /**
          * transfer info the version to activity
          */
         i.putExtra("id", 0);
         i.putExtra("isBlockedArray", isBlocked);
         }else{
-            i = new Intent(MainActivity.this, select_app.class); //set intent to open another activity view result
+            i = new Intent(DetailedActivity.this, select_app.class); //set intent to open another activity view result
             i.putExtra("isBlockedArray", isBlocked);
         }
         i.putExtra("valueArray", value);
