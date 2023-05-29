@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,12 @@
     android:layout_gravity="center|center_vertical"
     android:foregroundGravity="center_vertical|center"
     android:layoutDirection="rtl"
+    android:orientation="vertical"
     app:layout_anchorGravity="center|center_vertical"
     tools:context=".DetailedActivity">
 
     <ScrollView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foregroundGravity="center_vertical|center">
 
@@ -47,13 +48,14 @@
                 android:id="@+id/cardView_b4"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="23dp"
+                app:cardCornerRadius="5dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="10dp">
 
                 <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:textAlignment="center">
 
@@ -69,6 +71,7 @@
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
                         android:text="   גרסה בהתאמה אישית." />
 
                 </LinearLayout>
@@ -97,7 +100,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:nextFocusDown="@id/cardView_b2"
-                app:cardCornerRadius="23dp"
+                app:cardCornerRadius="5dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="10dp">
 
@@ -157,7 +160,7 @@
                 android:id="@+id/cardView_b2"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="23dp"
+                app:cardCornerRadius="5dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="10dp">
 
@@ -247,7 +250,8 @@
                 android:id="@+id/cardView_b3"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="23dp"
+                android:layout_marginBottom="17dp"
+                app:cardCornerRadius="5dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="10dp">
 
@@ -340,11 +344,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="17dp" />
-
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

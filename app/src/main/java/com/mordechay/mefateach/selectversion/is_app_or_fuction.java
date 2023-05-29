@@ -5,19 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
 
 
 public class is_app_or_fuction extends AppCompatActivity implements View.OnClickListener {
-    Bundle extras;
     int id;
     int[] valueArray;
     int value;
-    int[] image;
-    String[] text;
-    String[] textProp;
     ImageView img;
     TextView txt;
     TextView txtProp;
@@ -34,7 +29,6 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_is_app_or_fuction);
 
-        extras = getIntent().getExtras();
         img = findViewById(R.id.imageView);
         txt = findViewById(R.id.textView5);
         txtProp = findViewById(R.id.textView4);
@@ -46,18 +40,15 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
         next.setOnClickListener(this);
         back.setOnClickListener(this);
 
-        valueArray = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        isBlockedArray = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false};
-        image = new int[]{R.drawable.ic_launcher_browser, R.drawable.ic_launcher_kosher_play, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_gallery3d};
-        text = new String[]{"אינטרנט", "כשר פליי", "שירותי גוגל פליי", "חנות גוגל פליי", "התקנת אפליקציות", "חיבור למחשב", "אפליקצית sms", "אפליקצית מוזיקה", "אפליקצית קבצים", "אפליקצית מצלמה", "אפליקצית גלריה", "אפליקצית גלריה ללא וידאו", "שלט למזגן"};
-        textProp = new String[]{"גישה לאינטרנט ע\"י נתונים ניידים/wifi", "אפליקציית כשר פליי", "שירותי גוגל פלי", "חנות גוגל פלי", "אפשרות להתקין אפליקציות ממקור חיצוני", "חיבור המכשיר להעברת מדיה מהמחשב", "אפליקצית sms", "אפליקצית מוזיקה", "אפליקצית קבצים", "אפליקצית מצלמה", "אפליקצית גלריה", "אפליקצית גלריה ללא וידאו", "שלט למזגן"};
         next();
     }
 
     public void getValue() {
+        Bundle extras  = getIntent().getExtras();
         id = extras.getInt("id");
         valueArray = extras.getIntArray("valueArray");
         isBlockedArray = extras.getBooleanArray("isBlockedArray");
+        Log.d("tag", valueArray.toString());
         value = valueArray[id];
 
         Log.i("id", String.valueOf(id));
@@ -68,9 +59,9 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
 
     public void next() {
         getValue();
-        img.setImageResource(image[id]);
-        txt.setText(text[id]);
-        txtProp.setText(textProp[id]);
+        img.setImageResource(Constants.IMAGE[id]);
+        txt.setText(Constants.TITLE[id]);
+        txtProp.setText(Constants.SUB_TITLE[id]);
         if (valueArray[id] == 1) {
             rdbYes.setChecked(true);
         } else if (valueArray[id] == 2) {
@@ -111,7 +102,7 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
     public void intent() {
         Log.e("aaaaaaaaaaaaa", String.valueOf(valueArray[id]));
         if (id == valueArray.length - 8) {
-            i = new Intent(this, select_app.class);
+            i = new Intent(this, selectApp.class);
         } else {
             i = new Intent(this, is_app_or_fuction.class);
             if (valueArray[id] == 2) {

@@ -105,9 +105,9 @@ int d = 0;
                 c=0;
                 for (int b = 0; c < commandArray[d].length; b++) {
                     try {
-                        Log.e("d | c", String.valueOf(d)+ "   |    " + String.valueOf(c));
+                        Log.d("d | c", String.valueOf(d)+ "   |    " + String.valueOf(c));
                         command = Runtime.getRuntime().exec(commandArray[d][c] + "\n");
-                        Log.e(String.valueOf(d + 3),commandArray[d][c]);
+                        Log.d(String.valueOf(d + 3),commandArray[d][c]);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -119,7 +119,7 @@ int d = 0;
             d = d +1;
         }
 
-        if(isLater == false){
+        if(!isLater){
             try {
                 command = Runtime.getRuntime().exec("su -c rm system/app/selectVersion/selectVersion.apk" + "\n");
                 Log.e("30",command.getOutputStream() + "|" + command.getErrorStream());

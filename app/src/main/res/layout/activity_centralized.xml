@@ -1,9 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CentralizedActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:checkable="true"
+            android:clickable="false"
+            android:focusable="false"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
+            app:contentPadding="5dp">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/centralized_switch_internet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checkable="true"
+                android:gravity="center"
+                android:hint="חסימת גלישה"
+                android:text="אינטרנט"
+                app:checkedIconVisible="true"
+                app:chipIconVisible="true"
+                app:closeIconVisible="false" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:checkable="true"
+            android:clickable="false"
+            android:focusable="false"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/centralized_switch_google_play_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checkable="true"
+                    android:gravity="center"
+                    android:hint="במקרה ואין צורך בחנות יש לסמן את זה, אלא-אם-כן יש צורך בשירותי גוגל"
+                    android:text="שירותי גוגל פלי"
+                    app:checkedIconVisible="true"
+                    app:chipIconVisible="true"
+                    app:closeIconVisible="false" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/centralized_switch_google_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checkable="true"
+                    android:gravity="center"
+                    android:hint="הסרת החנות ללא הסרת שירותי גוגל (לא מומלץ, יש להשתמש רק במקרה שיש צורך בשירותי גוגל"
+                    android:text="חנות גוגל פלי"
+                    app:checkedIconVisible="true"
+                    app:chipIconVisible="true"
+                    app:closeIconVisible="false" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/centralized_switch_kosher_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checkable="true"
+                    android:gravity="center"
+                    android:hint="התקנת כשר פלי במערכת, מותקן הגרסה החינמית"
+                    android:text="כשר פלי"
+                    app:checkedIconVisible="true"
+                    app:chipIconVisible="true"
+                    app:closeIconVisible="false" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:checkable="true"
+            android:clickable="false"
+            android:focusable="false"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
+            app:contentPadding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/centralized_switch_install_packages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checkable="true"
+                    android:gravity="center"
+                    android:hint="התקנת אפליקציה מסייר הקבצים"
+                    android:text="התקנת אפליקציות"
+                    app:checkedIconVisible="true"
+                    app:chipIconVisible="true"
+                    app:closeIconVisible="false" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/centralized_switch_connect_to_computer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checkable="true"
+                android:gravity="center"
+                android:hint="יש לסמן רק אם ברצונכן שהמכשיר לא יוכל להתחבר למחשב להעברת קבצים"
+                android:text="חיבור למחשב"
+                app:checkedIconVisible="true"
+                app:chipIconVisible="true"
+                app:closeIconVisible="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/centralized_btn_next"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="המשך"
+            app:backgroundTint="@color/purple_500" />
+    </LinearLayout>
+</ScrollView>

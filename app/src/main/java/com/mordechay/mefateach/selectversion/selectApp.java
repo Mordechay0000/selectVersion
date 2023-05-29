@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 
-public class select_app extends AppCompatActivity implements View.OnClickListener {
+public class selectApp extends AppCompatActivity implements View.OnClickListener {
     Bundle extras;
     Button next;
     Button back;
@@ -28,8 +28,6 @@ public class select_app extends AppCompatActivity implements View.OnClickListene
         back = findViewById(R.id.button114);
         next.setOnClickListener(this);
         back.setOnClickListener(this);
-        valueArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0};
-        isBlockedArray = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false,false};
         valueArray = extras.getIntArray("valueArray");
         isBlockedArray = extras.getBooleanArray("isBlockedArray");
         swiArray = new Switch[]{
