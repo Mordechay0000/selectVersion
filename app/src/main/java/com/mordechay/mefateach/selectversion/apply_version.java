@@ -23,8 +23,6 @@ public class apply_version extends AppCompatActivity {
 
         extras = getIntent().getExtras();
 
-        valueArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0};
-        isBlockedArray = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false,false};
         valueArray = extras.getIntArray("valueArray");
         isBlockedArray = extras.getBooleanArray("isBlockedArray");
 

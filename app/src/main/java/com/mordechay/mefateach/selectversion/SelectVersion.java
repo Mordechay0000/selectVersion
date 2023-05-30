@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class DetailedActivity extends AppCompatActivity implements View.OnClickListener {
+public class SelectVersion extends AppCompatActivity implements View.OnClickListener {
 
     CardView cdvB0;
 
@@ -19,7 +19,7 @@ public class DetailedActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_select_version);
 
         cdvB0 = findViewById(R.id.cardView_b4); //create find view for card view
         cdvB0.setOnClickListener(this); //register card view to event on click listener
@@ -56,10 +56,10 @@ public class DetailedActivity extends AppCompatActivity implements View.OnClickL
         i.putExtra("isBlockedArray", Constants.IS_BLOCKED_CUSTOMIZE[num]);
         i.putExtra("valueArray", Constants.VALUE[num]);
         if (!skipScreen) {
-            i.setClass(DetailedActivity.this, is_app_or_fuction.class);
+            i.setClass(SelectVersion.this, is_app_or_fuction.class);
             i.putExtra("id", 0);
         } else {
-            i.setClass(DetailedActivity.this, selectApp.class); //set intent to open another activity view result
+            i.setClass(SelectVersion.this, selectApp.class); //set intent to open another activity view result
         }
         startActivity(i);
     }

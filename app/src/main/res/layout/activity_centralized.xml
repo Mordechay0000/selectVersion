@@ -115,6 +115,7 @@
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp"
             app:contentPadding="5dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -134,17 +135,188 @@
                     app:closeIconVisible="false" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/centralized_switch_connect_to_computer"
+                    android:id="@+id/centralized_switch_connect_to_computer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checkable="true"
+                    android:gravity="center"
+                    android:hint="יש לסמן רק אם ברצונכן שהמכשיר לא יוכל להתחבר למחשב להעברת קבצים"
+                    android:text="חיבור למחשב"
+                    app:checkedIconVisible="true"
+                    app:chipIconVisible="true"
+                    app:closeIconVisible="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:checkable="true"
+            android:clickable="false"
+            android:focusable="false"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
+            app:contentPadding="5dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checkable="true"
-                android:gravity="center"
-                android:hint="יש לסמן רק אם ברצונכן שהמכשיר לא יוכל להתחבר למחשב להעברת קבצים"
-                android:text="חיבור למחשב"
-                app:checkedIconVisible="true"
-                app:chipIconVisible="true"
-                app:closeIconVisible="false" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_duoqin_music" />
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:duplicateParentState="false"
+                        android:gravity="center|center_horizontal"
+                        android:text="נגן"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_pulsar" />
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="וידאו"
+                        android:textColorLink="#FF0303"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_camera" />
+
+                    <Switch
+                        android:id="@+id/switch3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="מצלמה"
+                        android:textColorLink="#FF0303"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_gallery3d" />
+
+                    <Switch
+                        android:id="@+id/switch4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="גלריה"
+                        android:textColorLink="#FF0303"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_documentsui" />
+
+                    <Switch
+                        android:id="@+id/switch5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="קבצים"
+                        android:textColorLink="#FF0303"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_messaging"
+                        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
+                    <Switch
+                        android:id="@+id/switch6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="הודעות"
+                        android:textColorLink="#FF0303"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_launcher_remote"
+                        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
+                    <Switch
+                        android:id="@+id/switch7"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="שלט למזגן"
+                        android:textColorLink="#FF0303"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -156,5 +328,6 @@
             android:layout_gravity="bottom"
             android:text="המשך"
             app:backgroundTint="@color/purple_500" />
+
     </LinearLayout>
 </ScrollView>

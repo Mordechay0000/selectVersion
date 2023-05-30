@@ -15,30 +15,35 @@
         <activity
             android:name=".CentralizedActivity"
             android:exported="false" />
-        <activity
-            android:name=".start_activity"
+        <!-- <activity
+            android:name=".SelectCentralizedOrDetailedViews"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
+        </activity> -->
+        <!-- <activity
             android:name=".selectApp"
-            android:exported="false" />
+            android:exported="false" /> -->
         <activity
             android:name=".apply_version"
             android:exported="false" />
         <activity
             android:name=".view_result"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".is_app_or_fuction"
-            android:exported="false" />
+            android:exported="false" /> -->
         <activity
-            android:name=".DetailedActivity"
+            android:name=".SelectVersion"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
