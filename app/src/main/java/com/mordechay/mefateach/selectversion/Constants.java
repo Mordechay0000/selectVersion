@@ -2,20 +2,19 @@ package com.mordechay.mefateach.selectversion;
 
 public class Constants {
 
+    public static final int INDEFINITE = 0;
+    public static final int SWITCH_OFF = 1;
+    public static final int SWITCH_ON = 2;
+    public static final int SWITCH_DISABLE_OFF = 3;
+    public static final int SWITCH_DISABLE_ON = 4;
+    public static final int SWITCH_LATER = 5;
+
     public static final int[][] VALUE = new int[][]{
-            {0, 0, 0, 0, 0, 0/* no graphi */, 0, 0, 0, 0, 0, 0/* no graphi */, 0}, //default
-            {2, 2, 2, 2, 2, 1/* no graphi */, 1, 2, 2, 2, 2, 2/* no graphi */, 2},
-            {2, 2, 2, 2, 2, 1/* no graphi */, 1, 1, 1, 1, 1, 2/* no graphi */, 2},
-            {2, 2, 2, 2, 2, 1/* no graphi */, 1, 1, 1, 1, 1, 1/* no graphi */, 2}
+            {Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE/* disable */, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE, Constants.INDEFINITE/* disable */, Constants.INDEFINITE}, //default
+            {Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_OFF/* disable */, Constants.SWITCH_OFF, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON/* disable */, Constants.SWITCH_ON},
+            {Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_OFF/* disable */, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_ON/* disable */, Constants.SWITCH_ON},
+            {Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_ON, Constants.SWITCH_OFF/* disable */, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF/* disable */, Constants.SWITCH_ON}
     };
-
-    public static final boolean[][] IS_BLOCKED_CUSTOMIZE = new boolean[][]{
-            {false, false, false, false, false, false, false, false, false, false, false, false, false}, //default
-            {false, true, false, true, false, false, false, true, false, false, false, false, false},
-            {false, true, false, true, false, false, false, false, false, false, false, false, false},
-            {false, true, false, true, false, false, false, false, false, false, false, false, false}
-    };
-
 
 
     public static final int[] IMAGE = new int[]{R.drawable.ic_launcher_browser, R.drawable.ic_launcher_kosher_play, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_gallery3d};

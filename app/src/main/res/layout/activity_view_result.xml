@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:textDirection="rtl"
-    tools:context=".view_result">
+    tools:context=".ViewResult">
 
     <ScrollView
         android:layout_width="fill_parent"

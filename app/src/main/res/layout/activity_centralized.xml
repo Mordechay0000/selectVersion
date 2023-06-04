@@ -180,8 +180,8 @@
                         android:layout_height="55dp"
                         app:srcCompat="@drawable/ic_launcher_duoqin_music" />
 
-                    <Switch
-                        android:id="@+id/switch1"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_player"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -196,8 +196,8 @@
                         android:layout_height="55dp"
                         app:srcCompat="@drawable/ic_launcher_pulsar" />
 
-                    <Switch
-                        android:id="@+id/switch2"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_video"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -221,8 +221,8 @@
                         android:layout_height="55dp"
                         app:srcCompat="@drawable/ic_launcher_camera" />
 
-                    <Switch
-                        android:id="@+id/switch3"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_camera"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -237,8 +237,8 @@
                         android:layout_height="55dp"
                         app:srcCompat="@drawable/ic_launcher_gallery3d" />
 
-                    <Switch
-                        android:id="@+id/switch4"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_gallery"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -262,8 +262,8 @@
                         android:layout_height="55dp"
                         app:srcCompat="@drawable/ic_launcher_documentsui" />
 
-                    <Switch
-                        android:id="@+id/switch5"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_file_explorer"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -279,8 +279,8 @@
                         app:srcCompat="@drawable/ic_launcher_messaging"
                         tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
-                    <Switch
-                        android:id="@+id/switch6"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_messages"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -305,8 +305,8 @@
                         app:srcCompat="@drawable/ic_launcher_remote"
                         tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
-                    <Switch
-                        android:id="@+id/switch7"
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/centralized_switch_system_app_remote"
                         android:layout_width="115dp"
                         android:layout_height="match_parent"
                         android:gravity="center"

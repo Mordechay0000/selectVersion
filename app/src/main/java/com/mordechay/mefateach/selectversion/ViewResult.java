@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class view_result extends AppCompatActivity implements View.OnClickListener {
+public class ViewResult extends AppCompatActivity implements View.OnClickListener {
 
     Bundle extras;
     int[] valueArray;
@@ -20,7 +20,6 @@ public class view_result extends AppCompatActivity implements View.OnClickListen
     TextView[] textViewsArray;
     Button btnNext;
     Button btnBack;
-    boolean[] isBlockedArray;
 
 
 
@@ -31,9 +30,7 @@ public class view_result extends AppCompatActivity implements View.OnClickListen
 
         extras = getIntent().getExtras();
         valueArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0};
-        isBlockedArray = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false,false};
         valueArray = extras.getIntArray("valueArray");
-        isBlockedArray = extras.getBooleanArray("isBlockedArray");
 
         Log.i("valueArray", String.valueOf(valueArray));
 
@@ -66,7 +63,7 @@ public class view_result extends AppCompatActivity implements View.OnClickListen
 
 
         for (int i = 0; i <= valueArray.length - 1; i++) {
-            if(isBlockedArray[i] == true){
+            if(valueArray[i] == Constants.SWITCH_DISABLE_OFF && valueArray[i] == Constants.SWITCH_DISABLE_ON){
                 textViewsArray[i].setTextColor(Color.GRAY);
             }
             Log.e("valuStop", String.valueOf(valueArray[i]));
@@ -99,9 +96,8 @@ public class view_result extends AppCompatActivity implements View.OnClickListen
             alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "אישור", new
                     DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    i = new Intent(view_result.this, apply_version.class);
+                                    i = new Intent(ViewResult.this, apply_version.class);
                                     i.putExtra("valueArray", valueArray);
-                                    i.putExtra("isBlockedArray", isBlockedArray);
                                     startActivity(i);
                                 }});
 alertDialog.show();

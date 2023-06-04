@@ -9,26 +9,20 @@ import java.io.IOException;
 
 public class apply_version extends AppCompatActivity {
 
-    Bundle extras;
-    int[] valueArray;
-    String[][] commandArray;
-    Process command;
-    boolean isLater = false;
-    boolean[] isBlockedArray;
+    private boolean isLater = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply_version);
 
-        extras = getIntent().getExtras();
+        Bundle extras = getIntent().getExtras();
 
-        valueArray = extras.getIntArray("valueArray");
-        isBlockedArray = extras.getBooleanArray("isBlockedArray");
+        int[] valueArray = extras.getIntArray("valueArray");
 
-        commandArray = new String[][]{
+        String[][] commandArray = new String[][]{
                 {
-                    "su -c rm vendor/bin/hw/wpa_supplicant",
+                        "su -c rm vendor/bin/hw/wpa_supplicant",
                         "su -c rm system/etc/apns-conf.xml",
                         "su rm -rf system/app/KosherPlay/KosherPlay.apk",
                         "su -c cp system/tmp/MtkSettings.apk system/system_ext/priv-app/MtkSettings",
@@ -37,10 +31,10 @@ public class apply_version extends AppCompatActivity {
                         "su -c chmod 644  system/system_ext/priv-app/MtkSystemUI/MtkSystemUI.apk"
                 },
                 {
-                    "su rm -rf system/app/KosherPlay/KosherPlay.apk",
+                        "su rm -rf system/app/KosherPlay/KosherPlay.apk",
                 },
                 {
-                    "su -c pm uninstall com.android.vending",
+                        "su -c pm uninstall com.android.vending",
                         "su -c pm uninstall com.google.android.gms",
                         "su -c rm system/system_ext/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
                         "su -c rm system/system_ext/priv-app/Phonesky/Phonesky.apk",
@@ -85,11 +79,12 @@ public class apply_version extends AppCompatActivity {
                 },
         };
 
+        Process command;
         try{
             command = Runtime.getRuntime().exec("su -c mount -o rw,remount /" + "\n");
-            Log.e("1",command.getOutputStream() + "|" + command.getErrorStream());
+            Log.e("1", command.getOutputStream() + "|" + command.getErrorStream());
             command = Runtime.getRuntime().exec("su -c mount -o rw,remount /vendor" + "\n");
-            Log.e("2",command.getOutputStream() + "|" + command.getErrorStream());
+            Log.e("2", command.getOutputStream() + "|" + command.getErrorStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,19 +94,19 @@ int d = 0;
         for (int i = 0; d <= valueArray.length - 1; i++) {
             if(valueArray[d] == 1) {
 
-            }else if(valueArray[d] == 2 && !isBlockedArray[d]){
+            }else if(valueArray[d] == Constants.SWITCH_ON){
                 c=0;
                 for (int b = 0; c < commandArray[d].length; b++) {
                     try {
                         Log.d("d | c", String.valueOf(d)+ "   |    " + String.valueOf(c));
                         command = Runtime.getRuntime().exec(commandArray[d][c] + "\n");
-                        Log.d(String.valueOf(d + 3),commandArray[d][c]);
+                        Log.d(String.valueOf(d + 3), commandArray[d][c]);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                     c= c +1;
                 }
-            }else if(valueArray[d] == 3){
+            }else if(valueArray[d] == Constants.SWITCH_LATER){
                 isLater = true;
             }
             d = d +1;
@@ -120,7 +115,7 @@ int d = 0;
         if(!isLater){
             try {
                 command = Runtime.getRuntime().exec("su -c rm system/app/selectVersion/selectVersion.apk" + "\n");
-                Log.e("30",command.getOutputStream() + "|" + command.getErrorStream());
+                Log.e("30", command.getOutputStream() + "|" + command.getErrorStream());
             } catch (IOException e) {
                 e.printStackTrace();
             }

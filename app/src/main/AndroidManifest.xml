@@ -31,7 +31,7 @@
             android:name=".apply_version"
             android:exported="false" />
         <activity
-            android:name=".view_result"
+            android:name=".ViewResult"
             android:exported="false" />
         <!--<activity
             android:name=".is_app_or_fuction"

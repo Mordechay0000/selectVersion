@@ -100,7 +100,6 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
 
 
     public void intent() {
-        Log.e("aaaaaaaaaaaaa", String.valueOf(valueArray[id]));
         if (id == valueArray.length - 8) {
             i = new Intent(this, selectApp.class);
         } else {
@@ -109,7 +108,7 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
                 if (id == 0 || id == 2) {
                     valueArray[id + 1] = 2;
                     isBlockedArray[id + 1] = true;
-                    Log.e("IsBlock", String.valueOf(isBlockedArray[id + 1]));
+                    Log.d("IsBlock", String.valueOf(isBlockedArray[id + 1]));
                 }
             }else{
                 valueArray[id + 1] = 0;

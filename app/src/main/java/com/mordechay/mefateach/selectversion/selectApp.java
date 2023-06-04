@@ -16,7 +16,6 @@ public class selectApp extends AppCompatActivity implements View.OnClickListener
     int[] valueArray;
     Switch[] swiArray;
     int id = 6;
-    boolean[] isBlockedArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +28,14 @@ public class selectApp extends AppCompatActivity implements View.OnClickListener
         next.setOnClickListener(this);
         back.setOnClickListener(this);
         valueArray = extras.getIntArray("valueArray");
-        isBlockedArray = extras.getBooleanArray("isBlockedArray");
         swiArray = new Switch[]{
-                findViewById(R.id.switch1),
-                findViewById(R.id.switch2),
-                findViewById(R.id.switch3),
-                findViewById(R.id.switch4),
-                findViewById(R.id.switch5),
-                findViewById(R.id.switch6),
-                findViewById(R.id.switch7)
+                findViewById(R.id.centralized_switch_system_app_player),
+                findViewById(R.id.centralized_switch_system_app_video),
+                findViewById(R.id.centralized_switch_system_app_camera),
+                findViewById(R.id.centralized_switch_system_app_gallery),
+                findViewById(R.id.centralized_switch_system_app_file_explorer),
+                findViewById(R.id.centralized_switch_system_app_messages),
+                findViewById(R.id.centralized_switch_system_app_remote)
         };
 
         int a = 0;
@@ -62,9 +60,8 @@ public class selectApp extends AppCompatActivity implements View.OnClickListener
                 }
                 a = a +1;
             }
-           Intent i = new Intent(this, view_result.class);
+           Intent i = new Intent(this, ViewResult.class);
             i.putExtra("valueArray",valueArray);
-            i.putExtra("isBlockedArray",isBlockedArray);
             startActivity(i);
         }else if(v == back){
            this.onBackPressed();

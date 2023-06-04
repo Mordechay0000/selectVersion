@@ -53,14 +53,15 @@ public class SelectVersion extends AppCompatActivity implements View.OnClickList
      */
     public void intent(int num, boolean skipScreen) {
         Intent i = new Intent();
-        i.putExtra("isBlockedArray", Constants.IS_BLOCKED_CUSTOMIZE[num]);
         i.putExtra("valueArray", Constants.VALUE[num]);
-        if (!skipScreen) {
+        /*if (!skipScreen) {
             i.setClass(SelectVersion.this, is_app_or_fuction.class);
             i.putExtra("id", 0);
         } else {
             i.setClass(SelectVersion.this, selectApp.class); //set intent to open another activity view result
         }
+         */
+        i.setClass(SelectVersion.this, CentralizedActivity.class); //set intent to open another activity view result
         startActivity(i);
     }
 }
