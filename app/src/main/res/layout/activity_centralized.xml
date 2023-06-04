@@ -11,6 +11,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/function_removed"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,6 +154,7 @@
                     android:gravity="center"
                     android:hint="יש לסמן רק אם ברצונכן שהמכשיר לא יוכל להתחבר למחשב להעברת קבצים"
                     android:text="חיבור למחשב"
+                    android:visibility="gone"
                     app:checkedIconVisible="true"
                     app:chipIconVisible="true"
                     app:closeIconVisible="false" />

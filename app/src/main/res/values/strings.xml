@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">בחירת גרסה</string>
     <string name="up_mainActivity">ברוך הבא \\n \\n בחר את הגרסה שמתאימה לך /n בחר בזהירות, לאחר סיום התהליך לא תוכל לשנות את הבחירה</string>
+    <string name="function_removed">בחרו את הפונקציות שברצונכם <b><font color="#DA0303">להסיר</font></b></string>
 </resources>
