@@ -9,7 +9,7 @@
     android:layoutDirection="rtl"
     android:orientation="vertical"
     app:layout_anchorGravity="center|center_vertical"
-    tools:context=".SelectVersion">
+    tools:context=".activities.SelectVersion">
 
     <ScrollView
         android:layout_width="match_parent"

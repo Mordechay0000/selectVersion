@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SelectVersion"
         tools:targetApi="31">
         <activity
-            android:name=".CentralizedActivity"
+            android:name=".activities.CentralizedActivity"
             android:exported="false" />
         <!-- <activity
             android:name=".SelectCentralizedOrDetailedViews"
@@ -28,16 +28,16 @@
             android:name=".selectApp"
             android:exported="false" /> -->
         <activity
-            android:name=".apply_version"
+            android:name=".activities.apply_version"
             android:exported="false" />
         <activity
-            android:name=".ViewResult"
+            android:name=".activities.ViewResult"
             android:exported="false" />
         <!--<activity
             android:name=".is_app_or_fuction"
             android:exported="false" /> -->
         <activity
-            android:name=".SelectVersion"
+            android:name=".activities.SelectVersion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

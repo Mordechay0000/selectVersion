@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.card.MaterialCardView;
+import com.mordechay.mefateach.selectversion.activities.CentralizedActivity;
+import com.mordechay.mefateach.selectversion.activities.SelectVersion;
 
 public class SelectCentralizedOrDetailedViews extends AppCompatActivity implements View.OnClickListener {
 

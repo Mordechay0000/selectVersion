@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
+import com.mordechay.mefateach.selectversion.data.Constants;
+
 
 public class is_app_or_fuction extends AppCompatActivity implements View.OnClickListener {
     int id;

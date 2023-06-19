@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:textDirection="rtl"
-    tools:context=".ViewResult">
+    tools:context=".activities.ViewResult">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -42,19 +42,6 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="הסרת כשר פלי: "
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="18dp" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="שירותי גוגל: "
             android:textColor="#000000"
             android:textSize="24sp"
@@ -65,10 +52,23 @@
             android:layout_height="20dp" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="חנות גוגל פלי: "
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הסרת כשר פלי: "
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -97,11 +97,13 @@
             android:text="חיבור למחשב: "
             android:textColor="#000000"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="18dp" />
+            android:layout_height="18dp"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/textView14"

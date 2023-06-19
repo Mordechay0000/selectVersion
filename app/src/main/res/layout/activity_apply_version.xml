@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".apply_version">
+    tools:context=".activities.apply_version">
 
     <TextView
         android:id="@+id/textView24"

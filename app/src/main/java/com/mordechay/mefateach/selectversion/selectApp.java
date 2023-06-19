@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 
+import com.mordechay.mefateach.selectversion.activities.ViewResult;
+
 public class selectApp extends AppCompatActivity implements View.OnClickListener {
     Bundle extras;
     Button next;
