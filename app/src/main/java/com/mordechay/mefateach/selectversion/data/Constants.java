@@ -54,15 +54,17 @@ public class Constants {
 
                     "su rm -rf system/app/KosherPlay/KosherPlay.apk",
 
-                    "su -c pm uninstall com.android.vending",
-                    "su -c pm uninstall com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.android.vending",
+                    "su -c pm uninstall-system-updates com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.google.android.gsf",
                     "su -c rm system/system_ext/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
                     "su -c rm system/system_ext/priv-app/Phonesky/Phonesky.apk",
                     "su -c rm system/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
             },
             {
-                    "su -c pm uninstall com.android.vending",
-                    "su -c pm uninstall com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.android.vending",
+                    "su -c pm uninstall-system-updates com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.google.android.gsf",
                     "su -c rm system/system_ext/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
                     "su -c rm system/system_ext/priv-app/Phonesky/Phonesky.apk",
                     "su -c rm system/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
