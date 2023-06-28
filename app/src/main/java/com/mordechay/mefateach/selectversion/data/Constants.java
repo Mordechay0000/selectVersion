@@ -6,6 +6,10 @@ import java.util.HashMap;
 
 public class Constants {
 
+    //splash screen DELAY
+    public static final int SPLASH_SCREEN_DELAY = 1000;
+
+
     public static final int INDEFINITE = 0;
     public static final int SWITCH_OFF = 1;
     public static final int SWITCH_ON = 2;
@@ -93,7 +97,6 @@ public class Constants {
             },
             {
                     "su -c rm system/system_ext/app/Camera/Camera.apk"
-
             },
             {
                     "su -c rm system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
