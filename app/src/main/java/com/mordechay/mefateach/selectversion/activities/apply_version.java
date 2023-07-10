@@ -7,6 +7,8 @@ import android.util.Log;
 
 import com.mordechay.mefateach.selectversion.R;
 import com.mordechay.mefateach.selectversion.data.Constants;
+import com.mordechay.mefateach.selectversion.data.DataTransfer;
+import com.mordechay.mefateach.selectversion.data.DeviceEnum;
 
 import java.io.IOException;
 
@@ -23,7 +25,16 @@ public class apply_version extends AppCompatActivity {
 
         int[] valueArray = extras.getIntArray("valueArray");
 
-        String[][] commandArray = Constants.COMMAND_ARRAY;
+
+        String[][] commandArray;
+        commandArray = (DataTransfer.device == DeviceEnum.QIN_F22) ?
+                Constants.COMMAND_ARRAY_QIN_F22 :
+                (DataTransfer.device == DeviceEnum.QIN_F21_PRO)?
+                        Constants.COMMAND_ARRAY_QIN_F21_PRO :
+                        (DataTransfer.device == DeviceEnum.QIN_F22_PRO)?
+                                Constants.COMMAND_ARRAY_QIN_F22_PRO :
+                                null
+        ;
 
         Process command;
         try{

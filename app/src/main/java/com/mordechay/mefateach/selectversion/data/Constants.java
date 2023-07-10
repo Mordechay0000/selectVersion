@@ -3,6 +3,7 @@ package com.mordechay.mefateach.selectversion.data;
 import com.mordechay.mefateach.selectversion.R;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Constants {
 
@@ -47,7 +48,141 @@ public class Constants {
                     Constants.SWITCH_OFF, Constants.SWITCH_OFF, Constants.SWITCH_OFF}
     };
 
-    public static final String[][] COMMAND_ARRAY = new String[][]{
+
+    public static final String[][] COMMAND_ARRAY_QIN_F22= new String[][]{
+            {
+                    "su -c rm vendor/bin/hw/wpa_supplicant",
+                    "su -c rm system/etc/apns-conf.xml",
+                    "su -c cp system/tmp/MtkSettings.apk system/system_ext/priv-app/MtkSettings",
+                    "su -c chmod 644 system/system_ext/priv-app/MtkSettings/MtkSettings.apk",
+                    "su -c cp system/tmp/MtkSystemUI.apk system/system_ext/priv-app/MtkSystemUI",
+                    "su -c chmod 644  system/system_ext/priv-app/MtkSystemUI/MtkSystemUI.apk",
+
+                    "su rm -rf system/app/KosherPlay/KosherPlay.apk",
+
+                    "su -c pm uninstall-system-updates com.android.vending",
+                    "su -c pm uninstall-system-updates com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.google.android.gsf",
+                    "su -c rm system/system_ext/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+                    "su -c rm system/system_ext/priv-app/Phonesky/Phonesky.apk",
+                    "su -c rm system/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+            },
+            {
+                    "su -c pm uninstall-system-updates com.android.vending",
+                    "su -c pm uninstall-system-updates com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.google.android.gsf",
+                    "su -c rm system/system_ext/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+                    "su -c rm system/system_ext/priv-app/Phonesky/Phonesky.apk",
+                    "su -c rm system/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+            },
+            {
+                    "su -c pm disable com.android.vending",
+                    "su -c cp /system/tmp/hosts  /system/etc/",
+                    "su -c cp /system/tmp/init.rc  /system/etc/init/hw/"
+            },
+            {
+                    "su rm -rf system/app/KosherPlay/KosherPlay.apk",
+            },
+            {
+                    "su -c cp /system/tmp/GooglePackageInstaller.apk  /system/system_ext/priv-app/GooglePackageInstaller/",
+                    "su -c chmod 644   /system/system_ext/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk"
+            },
+            {
+                    "su -c rm system/priv-app/MtpService/MtpService.apk"
+            },
+            {
+                    "su -c rm system/app/DqMusic/DqMusic.apk"
+            },
+            {
+                    "su -c cp system/tmp/MtkGallery2.apk system/system_ext/priv-app/MtkGallery2",
+                    "su -c chmod 644 system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
+            },
+            {
+                    "su -c rm system/system_ext/app/Camera/Camera.apk"
+            },
+            {
+                    "su -c rm system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
+            },
+            {
+                    "su -c rm system/priv-app/DocumentsUI/DocumentsUI.apk"
+
+            },
+            {
+                    "su -c rm system/priv-app/MtkMms/MtkMms.apk"
+            },
+            {
+                    "su -c rm system/app/Remote/Remote.apk"
+            },
+    };
+
+
+    public static final String[][] COMMAND_ARRAY_QIN_F21_PRO = new String[][]{
+            {
+                    "su -c rm vendor/bin/hw/wpa_supplicant",
+                    "su -c rm system/etc/apns-conf.xml",
+                    "su -c cp system/tmp/MtkSettings.apk system/system_ext/priv-app/MtkSettings",
+                    "su -c chmod 644 system/system_ext/priv-app/MtkSettings/MtkSettings.apk",
+                    "su -c cp system/tmp/MtkGallery2.apk system/system_ext/priv-app/MtkGallery2",
+                    "su -c chmod 644 system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk",
+
+                    "su rm -rf system/app/KosherPlay/KosherPlay.apk",
+
+                    "su -c pm uninstall-system-updates com.android.vending",
+                    "su -c pm uninstall-system-updates com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.google.android.gsf",
+                    "su -c rm system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+                    "su -c rm system/priv-app/Phonesky/Phonesky.apk",
+                    "su -c rm system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+            },
+            {
+                    "su -c pm uninstall-system-updates com.android.vending",
+                    "su -c pm uninstall-system-updates com.google.android.gms",
+                    "su -c pm uninstall-system-updates com.google.android.gsf",
+                    "su -c rm system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+                    "su -c rm system/priv-app/Phonesky/Phonesky.apk",
+                    "su -c rm system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+            },
+            {
+                    "su -c pm disable com.android.vending",
+                    "su -c cp /system/tmp/hosts  /system/etc/",
+                    "su -c cp /system/tmp/init.rc  /system/etc/init/hw/"
+            },
+            {
+                    "su rm -rf system/app/KosherPlay/KosherPlay.apk",
+            },
+            {
+                    "su -c cp /system/tmp/GooglePackageInstaller.apk  /system/priv-app/GooglePackageInstaller/",
+                    "su -c chmod 644   /system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk"
+            },
+            {
+                    "su -c rm system/priv-app/MtpService/MtpService.apk"
+            },
+            {
+                    "su -c rm system/app/DqMusic/DqMusic.apk"
+            },
+            {
+                    "su -c cp system/tmp/MtkGallery2.apk system/system_ext/priv-app/MtkGallery2",
+                    "su -c chmod 644 system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
+            },
+            {
+                    "su -c rm system/system_ext/app/Camera/Camera.apk"
+            },
+            {
+                    "su -c rm system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
+            },
+            {
+                    "su -c rm system/priv-app/DocumentsUI/DocumentsUI.apk"
+
+            },
+            {
+                    "su -c rm system/priv-app/MtkMms/MtkMms.apk"
+            },
+            {
+                    "su -c rm system/app/Remote/Remote.apk"
+            },
+    };
+
+    public static final String[][] COMMAND_ARRAY_QIN_F22_PRO = new String[][]{
             {
                     "su -c rm vendor/bin/hw/wpa_supplicant",
                     "su -c rm system/etc/apns-conf.xml",
