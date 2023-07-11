@@ -8,7 +8,7 @@ import java.util.Map;
 public class Constants {
 
     //splash screen DELAY
-    public static final int SPLASH_SCREEN_DELAY = 1000;
+    public static final int SPLASH_SCREEN_DELAY = 3000;
 
 
     public static final int INDEFINITE = 0;

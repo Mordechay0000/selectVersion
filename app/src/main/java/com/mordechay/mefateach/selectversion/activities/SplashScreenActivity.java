@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import com.mordechay.mefateach.selectversion.R;
 import com.mordechay.mefateach.selectversion.data.Constants;
@@ -21,6 +24,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        ImageView imageView = findViewById(R.id.imageViewSplashScreenAppIcon);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.splash_screen_anim);
+        imageView.startAnimation(animation);
+
         new Thread(() -> {
             performTimeConsumingTask();
             runOnUiThread(this::startNextActivity);
@@ -28,7 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
     private void performTimeConsumingTask() {
-        DataTransfer.device = DeviceEnum.valueOf(Build.BRAND.toUpperCase() + "_" + Build.MODEL.toUpperCase());
+        DataTransfer.device = DeviceEnum.valueOf(Build.BRAND.toUpperCase() + "_" + Build.MODEL.toUpperCase().replace(" ", "_"));
         Log.d(getClass().getName(), "device: " + DataTransfer.device.toString());
         try {
             Thread.sleep(Constants.SPLASH_SCREEN_DELAY);
