@@ -3,36 +3,46 @@ package com.mordechay.mefateach.selectversion.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
+import com.google.android.material.card.MaterialCardView;
 import com.mordechay.mefateach.selectversion.R;
 import com.mordechay.mefateach.selectversion.data.Constants;
 
-public class SelectVersion extends AppCompatActivity implements View.OnClickListener {
+public class SelectVersion extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
 
-    CardView cdvB0;
+    ColorStateList originalColor;
+    MaterialCardView cdvB0;
 
-    CardView cdvB1;
-    CardView cdvB2;
-    CardView cdvB3;
+    MaterialCardView cdvB1;
+    MaterialCardView cdvB2;
+    MaterialCardView cdvB3;
 
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_version);
 
         cdvB0 = findViewById(R.id.cardView_b4); //create find view for card view
+        cdvB0.setOnTouchListener(this);
         cdvB0.setOnClickListener(this); //register card view to event on click listener
 
         cdvB1 = findViewById(R.id.cardView_b1); //create find view for card view
         cdvB2 = findViewById(R.id.cardView_b2); //create find view for card view
         cdvB3 = findViewById(R.id.cardView_b3); //create find view for card view
+        cdvB1.setOnTouchListener(this);
         cdvB1.setOnClickListener(this); //register card view to event on click listener
+        cdvB2.setOnTouchListener(this);
         cdvB2.setOnClickListener(this); //register card view to event on click listener
+        cdvB3.setOnTouchListener(this);
         cdvB3.setOnClickListener(this); //register card view to event on click listener
 
     }
@@ -67,5 +77,22 @@ public class SelectVersion extends AppCompatActivity implements View.OnClickList
          */
         i.setClass(SelectVersion.this, CentralizedActivity.class); //set intent to open another activity view result
         startActivity(i);
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        MaterialCardView materialCardView = (MaterialCardView) v;
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                originalColor = materialCardView.getCardBackgroundColor();
+                materialCardView.setCardBackgroundColor(getResources().getColor(R.color.purple_500));
+                break;
+            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_CANCEL:
+                materialCardView.setCardBackgroundColor(originalColor);
+                break;
+        }
+        return false;
     }
 }

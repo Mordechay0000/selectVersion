@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="17dp" />
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView_b4"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                         android:text="   גרסה בהתאמה אישית." />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <Space
                 android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="5dp" />
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView_b1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -143,13 +143,13 @@
                         android:layout_height="17dp" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="17dp" />
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView_b2"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -227,13 +227,13 @@
                         android:layout_height="17dp" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="17dp" />
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView_b3"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -322,7 +322,7 @@
                         android:layout_height="17dp" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
