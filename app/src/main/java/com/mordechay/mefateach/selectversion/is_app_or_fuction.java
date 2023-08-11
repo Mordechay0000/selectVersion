@@ -61,9 +61,9 @@ public class is_app_or_fuction extends AppCompatActivity implements View.OnClick
 
     public void next() {
         getValue();
-        img.setImageResource(Constants.IMAGE[id]);
-        txt.setText(Constants.TITLE[id]);
-        txtProp.setText(Constants.SUB_TITLE[id]);
+        img.setImageResource(Constants.IMAGE_QIN[id]);
+        txt.setText(Constants.TITLE_QIN[id]);
+        txtProp.setText(Constants.SUB_TITLE_QIN[id]);
         if (valueArray[id] == 1) {
             rdbYes.setChecked(true);
         } else if (valueArray[id] == 2) {

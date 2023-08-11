@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.mordechay.mefateach.selectversion.R;
 import com.mordechay.mefateach.selectversion.data.Constants;
@@ -35,7 +36,11 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
     private void performTimeConsumingTask() {
-        DataTransfer.device = DeviceEnum.valueOf(Build.BRAND.toUpperCase() + "_" + Build.MODEL.toUpperCase().replace(" ", "_"));
+        try {
+            DataTransfer.device = DeviceEnum.valueOf(Build.BRAND.toUpperCase() + "_" + Build.MODEL.toUpperCase().replace(" ", "_"));
+        } catch (IllegalArgumentException e) {
+            DataTransfer.device = DeviceEnum.XINGYU_S500;
+        }
         Log.d(getClass().getName(), "device: " + DataTransfer.device.toString());
         try {
             Thread.sleep(Constants.SPLASH_SCREEN_DELAY);

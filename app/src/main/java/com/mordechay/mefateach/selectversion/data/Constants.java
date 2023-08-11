@@ -2,9 +2,6 @@ package com.mordechay.mefateach.selectversion.data;
 
 import com.mordechay.mefateach.selectversion.R;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Constants {
 
     //splash screen DELAY
@@ -247,9 +244,160 @@ public class Constants {
                     "su -c rm system/app/Remote/Remote.apk"
             },
     };
+    public static final String[][] COMMAND_ARRAY_XINGYU_S500 = new String[][]{
+            {
+                    "su -c rm -rf system/bin/wpa_supplicant",
+                    "su -c rm -rf system/etc/apns-conf.xml",
+                    "su -c cp system/tmp/Settings.apk system/priv-app/Settings",
+                    "su -c chmod 644 system/priv-app/Settings/Settings.apk",
+                    "su -c cp system/tmp/SystemUI.apk system/priv-app/SystemUI",
+                    "su -c chmod 644  system/priv-app/SystemUI/SystemUI.apk",
+
+                    "su -c rm -rf system/priv-app/KosherPlay/KosherPlay.apk",
+
+                    "su -c pm uninstall com.android.vending",
+                    "su -c pm uninstall com.google.android.gms",
+                    "su -c pm uninstall com.google.android.gsf",
+                    "su -c rm -rf system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+                    "su -c rm -rf system/priv-app/Phonesky/Phonesky.apk",
+                    "su -c rm -rf system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+            },
+            {
+                    "su -c pm com.android.vending",
+                    "su -c pm com.google.android.gms",
+                    "su -c pm uninstall com.google.android.gsf",
+                    "su -c rm -rf system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk",
+                    "su -c rm -rf system/priv-app/Phonesky/Phonesky.apk",
+                    "su -c rm -rf system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk"
+            },
+            {
+                    "su -c pm disable com.android.vending",
+                    "su -c cp /system/tmp/hosts  /system/etc/",
+                    "su -c cp /system/tmp/init.rc  /system/etc/init/hw/"
+            },
+            {
+                    "su -c rm -rf system/priv-app/KosherPlay/KosherPlay.apk",
+            },
+            {
+                    "su -c cp /system/tmp/GooglePackageInstaller.apk  /system/system_ext/priv-app/GooglePackageInstaller/",
+                    "su -c chmod 644   /system/system_ext/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk"
+            },
+            {
+                    "su -c rm -rf system/priv-app/MtpService/MtpService.apk"
+            },
+
+            //todo: change command
+            {
+                    "su -c rm -rf system/app/DqMusic/DqMusic.apk"
+            },
+            {
+                    "su -c cp system/tmp/MtkGallery2.apk system/system_ext/priv-app/MtkGallery2",
+                    "su -c chmod 644 system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
+            },
+            {
+                    "su -c rm -rf system/system_ext/app/Camera/Camera.apk"
+            },
+            {
+                    "su -c rm -rf system/system_ext/priv-app/MtkGallery2/MtkGallery2.apk"
+            },
+            //ent todo
 
 
-    public static final int[] IMAGE = new int[]{R.drawable.ic_launcher_browser, R.drawable.ic_launcher_kosher_play, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_app, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_browser, R.drawable.ic_launcher_gallery3d};
-    public static final String[] TITLE = new String[]{"אינטרנט", "כשר פליי", "שירותי גוגל פליי", "חנות גוגל פליי", "התקנת אפליקציות", "חיבור למחשב", "אפליקצית sms", "אפליקצית מוזיקה", "אפליקצית קבצים", "אפליקצית מצלמה", "אפליקצית גלריה", "אפליקצית גלריה ללא וידאו", "שלט למזגן"};
-    public static final String[] SUB_TITLE = new String[]{"גישה לאינטרנט ע\"י נתונים ניידים/wifi", "אפליקציית כשר פליי", "שירותי גוגל פלי", "חנות גוגל פלי", "אפשרות להתקין אפליקציות ממקור חיצוני", "חיבור המכשיר להעברת מדיה מהמחשב", "אפליקצית sms", "אפליקצית מוזיקה", "אפליקצית קבצים", "אפליקצית מצלמה", "אפליקצית גלריה", "אפליקצית גלריה ללא וידאו", "שלט למזגן"};
+
+            {
+                    "su -c rm -rf system/vendor/app/FileManager"
+
+            },
+            {
+                    "su -c rm -rf system/vendor/priv-app/MtkMms"
+            },
+            {
+                    "su -c rm -rf system/vendor/priv-app/FMRadio"
+            },
+    };
+
+
+
+
+
+    // for qin devices
+    public static final int[] IMAGE_QIN = new int[]{
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            R.drawable.ic_launcher_duoqin_music,
+            R.drawable.ic_launcher_pulsar,
+            R.drawable.ic_launcher_camera,
+            R.drawable.ic_launcher_gallery3d,
+            R.drawable.ic_launcher_documentsui,
+            R.drawable.ic_launcher_messaging,
+            R.drawable.ic_launcher_remote
+    };
+    public static final String[] TITLE_QIN = new String[]{
+            "אינטרנט",
+            "שירותי גוגל פלי",
+            "חנות גוגל פלי",
+            "כשר פלי",
+            "התקנת אפליקציות",
+            "חיבור למחשב",
+            "נגן",
+            "וידאו",
+            "מצלמה",
+            "גלריה",
+            "קבצים",
+            "הודעות",
+            "שלט למזגן"
+    };
+    public static final String[] SUB_TITLE_QIN = new String[]{
+            "חסימת גלישה",
+            "במקרה ואין צורך בחנות יש לסמן את זה, אלא-אם-כן יש צורך בשירותי גוגל",
+            "הסרת החנות ללא הסרת שירותי גוגל (לא מומלץ, יש להשתמש רק במקרה שיש צורך בשירותי גוגל",
+            "הסרת כשר פלי, כרגע מותקן הגרסה החינמית",
+            "הסרת  האפשרות להתקין אפליקציות מסייר הקבצים",
+            "יש לסמן רק אם ברצונכן שהמכשיר לא יוכל להתחבר למחשב להעברת קבצים"
+    };
+
+    //for XINGYU_S500 device
+    public static final int[] IMAGE_XINGYU_S500 = new int[]{
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            R.drawable.ic_launcher_duoqin_music,
+            R.drawable.ic_launcher_video,
+            R.drawable.ic_launcher_camera,
+            R.drawable.ic_launcher_gallery3d,
+            R.drawable.ic_launcher_documentsui,
+            R.drawable.ic_launcher_messaging,
+            R.drawable.ic_launcher_remote
+    };
+    public static final String[] TITLE_XINGYU_S500 = new String[]{
+            "אינטרנט",
+            "שירותי גוגל פלי",
+            "חנות גוגל פלי",
+            "כשר פלי",
+            "התקנת אפליקציות",
+            "חיבור למחשב",
+            "נגן",
+            "וידאו",
+            "מצלמה",
+            "גלריה",
+            "קבצים",
+            "הודעות",
+            "שלט למזגן"
+    };
+    public static final String[] SUB_TITLE_XINGYU_S500 = new String[]{
+            "חסימת גלישה",
+            "במקרה ואין צורך בחנות יש לסמן את זה, אלא-אם-כן יש צורך בשירותי גוגל",
+            "הסרת החנות ללא הסרת שירותי גוגל (לא מומלץ, יש להשתמש רק במקרה שיש צורך בשירותי גוגל",
+            "הסרת כשר פלי, כרגע מותקן הגרסה החינמית",
+            "הסרת  האפשרות להתקין אפליקציות מסייר הקבצים",
+            "יש לסמן רק אם ברצונכן שהמכשיר לא יוכל להתחבר למחשב להעברת קבצים"
+    };
+
 }

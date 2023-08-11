@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,46 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="@string/function_removed"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="10dp"
-            android:checkable="true"
-            android:clickable="false"
-            android:focusable="false"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="5dp"
-            app:cardMaxElevation="5dp"
-            app:contentPadding="5dp">
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/centralized_switch_internet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checkable="true"
-                android:gravity="center"
-                android:hint="חסימת גלישה"
-                android:text="אינטרנט"
-                app:checkedIconVisible="true"
-                app:chipIconVisible="true"
-                app:closeIconVisible="false" />
-        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -184,7 +145,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -198,10 +160,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:duplicateParentState="false"
-                        android:gravity="center|center_horizontal"
+                        android:gravity="center"
                         android:text="נגן"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        />
 
                     <ImageView
                         android:layout_width="60dp"
@@ -224,8 +187,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -265,8 +228,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -333,12 +296,11 @@
         </com.google.android.material.card.MaterialCardView>
 
         <Button
-            android:id="@+id/centralized_btn_next"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="המשך"
+            android:text="@string/next"
             app:backgroundTint="@color/purple_500" />
 
     </LinearLayout>

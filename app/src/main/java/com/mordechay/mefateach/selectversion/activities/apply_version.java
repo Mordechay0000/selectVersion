@@ -33,6 +33,8 @@ public class apply_version extends AppCompatActivity {
                         Constants.COMMAND_ARRAY_QIN_F21_PRO :
                         (DataTransfer.device == DeviceEnum.QIN_F22_PRO)?
                                 Constants.COMMAND_ARRAY_QIN_F22_PRO :
+                                (DataTransfer.device == DeviceEnum.XINGYU_S500)?
+                                        Constants.COMMAND_ARRAY_XINGYU_S500 :
                                 null
         ;
 
@@ -40,15 +42,19 @@ public class apply_version extends AppCompatActivity {
         try{
             command = Runtime.getRuntime().exec("su -c mount -o rw,remount /" + "\n");
             Log.e("1", command.getOutputStream() + "|" + command.getErrorStream());
-            command = Runtime.getRuntime().exec("su -c mount -o rw,remount /vendor" + "\n");
+            command = Runtime.getRuntime().exec("su -c mount -o rw,remount /system" + "\n");
             Log.e("2", command.getOutputStream() + "|" + command.getErrorStream());
+            command = Runtime.getRuntime().exec("su -c mount -o rw,remount /vendor" + "\n");
+            Log.e("3", command.getOutputStream() + "|" + command.getErrorStream());
+            command = Runtime.getRuntime().exec("su -c mount -o rw,remount /product" + "\n");
+            Log.e("4", command.getOutputStream() + "|" + command.getErrorStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 int d = 0;
         int c = 0;
-        for (int i = 0; d <= valueArray.length - 1; i++) {
+        for (int i = 0; d < valueArray.length; i++) {
             if(valueArray[d] == 1) {
 
             }else if(valueArray[d] == Constants.SWITCH_ON){
@@ -57,7 +63,7 @@ int d = 0;
                     try {
                         Log.d("d | c", String.valueOf(d)+ "   |    " + String.valueOf(c));
                         command = Runtime.getRuntime().exec(commandArray[d][c] + "\n");
-                        Log.d(String.valueOf(d + 3), commandArray[d][c]);
+                        Log.d(String.valueOf(d + 5), commandArray[d][c]);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -77,10 +83,10 @@ int d = 0;
                 e.printStackTrace();
             }
         }
-        /* try {
-            //command = Runtime.getRuntime().exec("su -c reboot" + "\n");
+        try {
+            command = Runtime.getRuntime().exec("su -c reboot" + "\n");
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 }
