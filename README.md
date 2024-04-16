@@ -9,8 +9,8 @@
 
 קרדיט (ניתן גם לתרגם לעברית אם זה חשוב):
 
-||The application was developed in open source by Mordechay
+'''The application was developed in open source by Mordechay
 Source code: https://github.com/Mordechay0000/selectVersion
 Contact: m8572998@gmail.com
-github: https://github.com/Mordechay0000||
+github: https://github.com/Mordechay0000'''
 
